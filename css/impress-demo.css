@@ -1,0 +1,603 @@
+/**
+ * This is a stylesheet for a demo presentation for impress.js
+ * 
+ * It is not meant to be a part of impress.js and is not required by impress.js.
+ * I expect that anyone creating a presentation for impress.js would create their own
+ * set of styles.
+ */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+body {
+    font-family: 'CodeProDemoRegular', sans-serif;
+    
+    min-height: 740px;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+
+    -webkit-font-smoothing: antialiased;
+}
+
+b, strong { font-weight: bold }
+i, em { font-style: italic}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+/* enable clicking on elements 'hiding' behind body in 3D */
+body     { pointer-events: none; }
+#impress { pointer-events: auto; }
+
+/* COMMON STEP STYLES */
+
+.step {
+    width: 900px;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.step {
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+/* fade out inactive slides */
+.step:not(.active) {
+    opacity: 0.3;
+}
+
+/* STEP SPECIFIC STYLES */
+#engenharia-do-futuro h1 {
+    text-align: center;
+    line-height:100px;
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 200px;
+    color: #00A3FF;
+}
+
+.area {
+    margin-left: 200px;
+}
+
+.area h1 {
+    font-size: 160px;
+    line-height: 160px;
+}
+
+#bio h1 {
+    margin-top: 250px;
+    margin-left: 100px;
+}
+
+#nano h1 {
+    margin-top: 168px;
+    margin-left: 24px;
+}
+
+#info h1 {
+    margin-top: 348px;
+    margin-left: 37px;
+}
+
+#animation img,
+#animation-2 img,
+#animation canvas,
+#animation-2 canvas,
+#animation div,
+#animation-2 div {
+    position: absolute;
+}
+
+/* Animation 1 */
+
+#cow {
+    z-index: 7;
+    height: 187px;
+    top: 420px;
+    left: 740px;
+}
+
+#tank {
+    z-index: 5;
+    height: 320px;
+    top: 300px;
+    left: 50px;
+}
+
+#storage {
+    z-index: 5;
+    height: 60px;
+    top: 550px;
+    left: 550px;
+}
+
+#particles {
+    z-index: 10;
+    top: 345px;
+    left: 100px;
+}
+
+/* Animation 2 */
+
+#tank-2 {
+    z-index: 5;
+    height: 320px;
+    top: 300px;
+    right: -70px;
+}
+
+#particles-2 {
+    z-index: 10;
+    top: 345px;
+    right: 0px;
+}
+
+#methane-tank {
+    top: 480px;
+    left: 50px;
+    height: 180px;
+}
+
+/* City */
+#city {
+    display:none;
+}
+
+#animation-2-workarea {
+    z-index: 2000;
+}
+
+#house-1,
+#house-2,
+#house-3,
+#house-4 {
+    height: 100px;
+    top: 480px;
+    left: 50px;
+}
+
+#house-2 {
+    left: 200px;
+}
+
+#house-3,
+#house-4 {
+    top: 610px;
+}
+
+#house-4 {
+    left: 200px;
+}
+
+#barn {
+    height: 90px;
+    top: 480px;
+    left: 200px;
+}
+
+#barn-tank {
+    left: 430px;
+    top: 480px;
+    height: 80px;
+}
+
+#barn-cow-1 {
+    height: 40px;
+    top: 530px;
+    left: 530px;
+}
+
+#barn-cow-2 {
+    height: 40px;
+    top: 550px;
+    left: 600px;
+    
+    /* flip image */
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+#barn-sheep {
+    height: 30px;
+    top: 540px;
+    left: 950px;
+}
+
+#factory {
+    top: 500px;
+    left: 740px;
+}
+
+.electric-tower {
+    height: 100px;
+    left: 650px;
+    top: 540px;
+    z-index: 14;
+}
+
+#electric-tower-2 {
+    left: 400px;
+}
+
+#electric-tower-3 {
+    left: 180px;
+}
+
+#electric-tower-4 {
+    left: 10px;
+}
+
+.wire {
+    top:542px;
+    z-index: 12;
+}
+
+#wire-1 {
+    left: 50px;
+    width: 140px;
+}
+
+#wire-2 {
+    left: 55px;
+    width: 140px;
+}
+
+#wire-3 {
+    left: 222px;
+    width: 182px;
+}
+
+#wire-4 {
+    left: 227px;
+    width: 182px;
+}
+
+#wire-5 {
+    left: 442px;
+    width: 215px;
+}
+
+#wire-6 {
+    left: 447px;
+    width: 215px;
+}
+
+.street-light {
+    height: 80px;
+}
+
+#street-light-1 {
+    left: 0px;
+    top: 518px;
+}
+
+#street-light-2 {
+    left: 346px;
+    top: 518px;
+}
+
+#street-light-3 {
+    left: 0px;
+    top: 648px;
+}
+
+#street-light-4 {
+    left: 346px;
+    top: 648px;
+}
+
+
+#car {
+    height: 50px;
+    top: 575px;
+    left: 430px;
+}
+
+/* Story */
+
+#lisa-1, #lisa-2 {
+    height: 700px;
+}
+
+#lisa-balloon-1 {
+    height: 280px;
+    top: -80px;
+}
+
+#lisa-speech-1 {
+    top: 20px;
+    left: 265px;
+    font-size: 35px;
+}
+
+#lisa-balloon-2 {
+    height: 280px;
+    top: -80px;
+    left: 245px;
+}
+
+#lisa-speech-2 {
+    top: -15px;
+    left: 295px;
+    font-size: 35px;
+    width: 330px;
+}
+
+#protein-chain {
+    top: 150px;
+    left: 380px;
+    height: 400px;
+}
+
+#cida {
+    height: 700px;
+}
+
+#cida-balloon {
+    height: 200px;
+    top: -80px;
+    left: 180px;
+}
+
+#cida-speech {
+    top: -25px;
+    left: 235px;
+    font-size: 30px;
+    width: 410px;
+}
+
+#tona {
+    margin-top: 180px;
+    height: 500px;
+}
+
+#tona-balloon {
+    height: 240px;
+    top: 40px;
+    left: 240px;
+}
+
+#tona-speech {
+    top: 75px;
+    left: 255px;
+    font-size: 25px;
+    width: 270px;
+    text-align: center;
+}
+
+#acetic-acid {
+    top: 300px;
+    left: 500px;
+}
+
+#tana-1, #tana-2 {
+    margin-top: 100px;
+    height: 600px;
+}
+
+#tana-balloon-1,
+#tana-balloon-2 {
+    height: 260px;
+    top: -40px;
+    left: 240px;
+}
+
+#tana-speech-1 {
+    top: 0px;
+    left: 265px;
+    font-size: 25px;
+    width: 270px;
+    text-align: center;
+}
+
+#tana-speech-2 {
+    top: 20px;
+    left: 265px;
+    font-size: 25px;
+    width: 270px;
+    text-align: center;
+}
+
+#methane {
+    height: 300px;
+    top: 350px;
+    left: 400px;
+}
+
+#story-7,
+#story-8 {
+    padding-top: 250px;
+}
+
+#story-7 img,
+#story-8 img {
+    height: 400px;
+    margin-left: 30px;
+}
+
+#story-7 .balloon,
+#story-8 .balloon {
+    position: absolute;
+    top: -50px;
+    left: 60px;
+    height: 300px;
+}
+
+#story-7 .speech {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    width: 600px;
+    font-size: 48px;
+}
+
+#story-8 .speech {
+    position: absolute;
+    top: 15px;
+    left: 130px;
+    width: 600px;
+    font-size: 48px;
+    line-height: 52px;
+    text-align: center;
+}
+
+#story-8 .speech .setrem {
+    color: #00C271;
+    font-weight: bold;
+}
+
+
+/*
+ * SLIDE STEP STYLES
+ *
+ * inspired by: http://html5slides.googlecode.com/svn/trunk/styles.css
+ *
+ * ;)
+ */
+
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    padding: 0;
+    /*
+    padding: 40px 60px;
+
+    
+    border-radius: 10px;
+
+    background-color: white;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .3);
+    */
+    
+
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-size: 30px;
+    line-height: 36px;
+
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+/* UTILS */
+.center {
+    text-align: center;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.speech {
+    position: absolute;
+    font-size: 28px;
+}
+
+.story {
+    display: none;
+}

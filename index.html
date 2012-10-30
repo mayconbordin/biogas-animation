@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Bio Gás</title>
+    
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+    <div id="impress">
+        <div id="engenharia-do-futuro" class="step slide" data-x="0" data-y="-1500">
+            <h1>Engenharia do Futuro</h1>
+        </div>
+
+        <div id="bio" class="step slide area" data-x="1200" data-y="-1500">
+            <h1>BIO</h1>
+        </div>
+        <div id="nano" class="step slide area" data-x="1200" data-y="-1500" data-rotate="-45">
+            <h1>NANO</h1>
+        </div>
+        <div id="info" class="step slide area" data-x="1200" data-y="-1500" data-rotate="45">
+            <h1>INFO</h1>
+        </div>
+        
+        <div id="animation" class="step slide" data-x="100000" data-y="-1500" data-scale="80">
+            <div id="animation-canvas"></div>
+            <canvas id="animation-workarea" width="1024" height="768"></canvas>
+            
+            <img id="cow" src="img/cow_2.svg" />
+            <img id="tank" src="img/gas_tank.svg" />
+            <img id="storage" src="img/storagebox.svg" />
+            
+            <canvas id="particles" width="180" height="138"></canvas>
+        </div>
+        
+        <div id="story-1" class="step slide story" data-x="72000" data-y="4500">
+            <img id="lisa-1" src="img/lisa.svg" />
+            <img id="lisa-balloon-1" class="absolute" src="img/speech_balloon.svg" />
+            <p id="lisa-speech-1" class="speech">Olá. Eu sou a Lisa.</p>
+        </div>
+        
+        <div id="story-2" class="step slide story" data-x="72000" data-y="4500">
+            <img id="lisa-2" src="img/lisa_2.svg" />
+            <img id="lisa-balloon-2" class="absolute" src="img/speech_balloon.svg" />
+            <img id="protein-chain" class="absolute" src="img/protein_chain.svg" />
+            <p id="lisa-speech-2" class="speech">Eu quebro as proteínas em aminoácidos.</p>
+        </div>
+        
+        <div id="story-3" class="step slide story" data-x="72000" data-y="4500">
+            <img id="cida" src="img/cida.svg" />
+            <img id="cida-balloon" class="absolute" src="img/speech_balloon_2.svg" />
+            <p id="cida-speech" class="speech">Eu sou a Cida. Rompo os aminoácidos em ácido e álcool.</p>
+        </div>
+        
+        <div id="story-4" class="step slide story" data-x="72000" data-y="4500">
+            <img id="tona" src="img/tona.svg" />
+            <img id="tona-balloon" class="absolute" src="img/speech_balloon.svg" />
+            <img id="acetic-acid" class="absolute" src="img/acetic_acid.svg" />
+            <p id="tona-speech" class="speech">Eu sou a Tona, transformo ácidos em acetona e ácido acético.</p>
+        </div>
+        
+        <div id="story-5" class="step slide story" data-x="72000" data-y="4500">
+            <img id="tana-1" src="img/tana.svg" />
+            <img id="tana-balloon-1" class="absolute" src="img/speech_balloon.svg" />
+            <p id="tana-speech-1" class="speech">Eu sou a Tana, sou muito delicada mas faço o trabalho mais importante.</p>
+        </div>
+        
+        <div id="story-6" class="step slide story" data-x="72000" data-y="4500">
+            <img id="tana-2" src="img/tana.svg" />
+            <img id="tana-balloon-2" class="absolute" src="img/speech_balloon.svg" />
+            <img id="methane" class="absolute" src="img/methane.svg" />
+            <p id="tana-speech-2" class="speech">Transformo tudo em metano para aquecer e iluminar.</p>
+        </div>
+        
+        <div id="animation-2" class="step slide" data-x="200000" data-y="-1500" data-scale="80">
+            <div id="animation-canvas-2"></div>
+            <canvas id="animation-2-workarea" width="1024" height="768"></canvas>
+            
+            <img id="tank-2" src="img/gas_tank_inside.svg" />
+            <img id="methane-tank" src="img/methane_tank.svg" />
+            
+            <div id="city">
+                <!-- houses -->
+                <img id="house-1" src="img/house.svg" />
+                <!--<img id="house-2" src="img/house.svg" />-->
+                <img id="house-3" src="img/house.svg" />
+                <img id="house-4" src="img/house.svg" />
+                
+                <!-- farm -->
+                <img id="barn" src="img/red_barn.svg" />
+                <img id="barn-tank" src="img/gas_tank_2.svg" />
+                <img id="barn-cow-1" src="img/cow_2.svg" />
+                <img id="barn-cow-2" src="img/cow_2.svg" />
+                <img id="barn-sheep" src="img/sheep.svg" />
+                
+                <img id="factory" src="img/factory.svg" />
+                
+                <!-- electric towers -->
+                <img id="electric-tower-1" class="electric-tower" src="img/electric_tower.svg" />
+                <img id="electric-tower-2" class="electric-tower" src="img/electric_tower.svg" />
+                <img id="electric-tower-3" class="electric-tower" src="img/electric_tower.svg" />
+                <img id="electric-tower-4" class="electric-tower" src="img/electric_tower.svg" />
+                
+                <!-- wires -->
+                <img id="wire-1" class="wire" src="img/wire.svg" />
+                <img id="wire-2" class="wire" src="img/wire.svg" />
+                <img id="wire-3" class="wire" src="img/wire.svg" />
+                <img id="wire-4" class="wire" src="img/wire.svg" />
+                <img id="wire-5" class="wire" src="img/wire.svg" />
+                <img id="wire-6" class="wire" src="img/wire.svg" />
+                
+                <!-- street lights -->
+                <img id="street-light-1" class="street-light" src="img/street_light.svg" />
+                <img id="street-light-2" class="street-light" src="img/street_light.svg" />
+                <img id="street-light-3" class="street-light" src="img/street_light.svg" />
+                <img id="street-light-4" class="street-light" src="img/street_light.svg" />
+                
+                <img id="car" src="img/car.svg" />
+            </div>
+            
+            <canvas id="particles-2" width="180" height="138"></canvas>
+        </div>
+        
+        <div id="story-7" class="step slide story" data-x="200000" data-y="200000" data-scale="80">
+            <img class="lisa" src="img/lisa.svg" />
+            <img class="cida" src="img/cida_2.svg" />
+            <img class="tona" src="img/tona_2.svg" />
+            <img class="tana" src="img/tana_2.svg" />
+            
+            <img class="balloon" src="img/speech_balloon_3.svg" />
+            <p class="speech">Vamos limpar o mundo</p>
+        </div>
+        
+        <div id="story-8" class="step slide story" data-x="200000" data-y="200000" data-scale="80">
+            <img class="lisa" src="img/lisa.svg" />
+            <img class="cida" src="img/cida_2.svg" />
+            <img class="tona" src="img/tona_2.svg" />
+            <img class="tana" src="img/tana_2.svg" />
+            
+            <img class="balloon" src="img/speech_balloon_3.svg" />
+            <p class="speech">Vamos fazer isso na <span class="setrem">SETREM</span></p>
+        </div>
+    </div>
+    
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script src="js/jstween-1.1.min.js"></script>
+    <script src="js/impress.js"></script>
+    <script src="js/illuminated.js"></script>
+    
+    <script src="js/header.js"></script>
+    <script>
+        // Basic Setup -------------------------------------------------------//
+        var presentation = impress();
+        presentation.init();
+        
+        // Importing relevant classes
+        var Lamp = illuminated.Lamp
+          , RectangleObject = illuminated.RectangleObject
+          , DiscObject = illuminated.DiscObject
+          , Vec2 = illuminated.Vec2
+          , Lighting = illuminated.Lighting
+          ;
+        
+        var animation  = $('#animation')
+          , animation2 = $('#animation-2')
+          , width  = 1024
+          , height = 768
+          , paper  = Raphael(document.getElementById("animation-canvas"), width, height)
+          , paper2 = Raphael(document.getElementById("animation-canvas-2"), width, height)
+          , animationCanvas   = document.getElementById("animation-workarea")
+          , animationContext  = animationCanvas.getContext("2d")
+          , animation2Canvas  = document.getElementById("animation-2-workarea")
+          , animation2Context = animation2Canvas.getContext("2d")
+          ;
+        
+        setupScenario(paper, width, height);
+        setupScenario(paper2, width, height, {sky: "90-#009cff-#005b94"});
+
+        // Objects -----------------------------------------------------------//
+        var cow         = $("#cow")
+          , tank        = $("#tank")
+          , tank2       = $("#tank-2")
+          , storage     = $("#storage")
+          , gas         = $("#particles")
+          , gas2        = $("#particles-2")
+          , methaneTank = $("#methane-tank")
+          , car         = $("#car")
+          , city        = $("#city")
+          ;
+          
+        // SVG Paths ---------------------------------------------------------//
+        var pipe = paper.path("M0,-100 L0,0 L460,0 L460,-100");
+        pipe.attr("stroke", "#CCC");
+        pipe.attr("stroke-width", 15);
+        pipe.transform("T180,680");
+        
+        var pipe2
+          , animation2Paths = [];
+ 
+        // Effects -----------------------------------------------------------//
+        var sun = createLight(animationCanvas, animationContext, 70, 70, {
+            color: 'yellow',
+            distance: 70,
+            radius: 30,
+            samples: 100
+        });
+        
+        var streetLightOptions = {
+            color: '#f4ff99',
+            distance: 16,
+            radius: 1,
+            samples: 10
+        };
+        
+        var streetLights;
+        
+        // Functions ---------------------------------------------------------//
+        function resetAnimation() {
+            animation.find(".dung, .pipe").remove();
+            tank.attr('src', 'img/gas_tank.svg');
+        }
+        
+        function playAnimation() {
+            cowDefecate(animation, 0, 15);
+            
+            fillPipe(animation, [
+                {direction: 'down', length: 85 , x: 634, y: 600},
+                {direction: 'left', length: 470, x: 635, y: 674},
+                {direction: 'up'  , length: 85 , x: 174, y: 676}
+            ], {color:"#361600"}, function() {
+                tank.attr('src', 'img/gas_tank_inside.svg');
+                particles('particles', ['#8e2bff', '#ff6600', '#ff2a2a', '#fffa10']);
+                
+                setTimeout(function() {
+                    //presentation.next();
+                    //gas.hide();
+                }, 2500);
+            });
+        }
+        
+        function resetAnimation2() {
+            animation2.find(".dung, .pipe").remove();
+            methaneTank.css({height:180, left:50, top:480});
+            gas2.css({left: '', right: 0});
+            tank2.css({left: '', right: -70});
+            city.hide();
+            
+            animation2Context.clearRect(0,0,1024,768);
+            $.each(animation2Paths, function(k,v) {
+                v.remove();
+            });
+        }
+        
+        function playAnimation2() {
+            particles('particles-2', ['black']);
+            
+            pipe2 = paper2.path("M0,0 L-50,0 L-50,280 L-300,280 L-300,200");
+            pipe2.attr("stroke", "#CCC");
+            pipe2.attr("stroke-width", 15);
+            pipe2.transform("T685,400");
+            
+            fillPipe(animation2, [
+                {direction: 'left', length: 51 , x: 671, y: 394},
+                {direction: 'down', length: 289, x: 629, y: 396},
+                {direction: 'left', length: 259, x: 629, y: 674},
+                {direction: 'up'  , length: 40 , x: 379, y: 674}
+            ], playMoveAnimation2);
+        }
+        
+        function playMoveAnimation2() {
+            tweenMoveLeft(tank2);
+            tweenMoveLeft(gas2);
+            tweenMoveLeft(methaneTank, {stop: 600});
+            
+            animation2.find(".pipe").remove();
+            pipe2.remove();
+            
+            $.play();
+            setTimeout(playEndAnimation2, 2000);
+        }
+        
+        function playEndAnimation2() {
+            methaneTank.animate({height:50, left:880, top:580}, 2000);
+            city.fadeIn(2000);
+
+            var pipe3 = paper2.path("M0,0 L0,50 L-50,50");
+            pipe3.attr("stroke", "#CCC");
+            pipe3.attr("stroke-width", 4);
+            pipe3.transform("T920,620");
+            
+            var pipe4 = paper2.path("M0,0 L0,10 L475,10 L475,30");
+            pipe4.attr("stroke", "#CCC");
+            pipe4.attr("stroke-width", 4);
+            pipe4.transform("T460,560");
+            
+            var road = paper2.path("M0,0 L400,0 L400,-200 L400,-130 L0,-130 L700,-130 L700,0 L1024,0");
+            road.attr("stroke", "gray");
+            road.attr("stroke-width", 30);
+            road.transform("T0,740");
+            
+            var roadLine = paper2.path("M0,0 L400,0 L400,-200 M400,-130 L0,-130 M400,-130 L700,-130 L700,0 L1024,0");
+            roadLine.attr("stroke", "yellow");
+            roadLine.attr("stroke-width", 2);
+            roadLine.attr("stroke-dasharray", "-");
+            roadLine.transform("T0,740");
+            
+            var wire1 = paper2.path("M0,0 L70,40");
+            wire1.attr("stroke", "black");
+            wire1.attr("stroke-width", 1);
+            wire1.transform("T700,542");
+            
+            var wire2 = paper2.path("M0,0 L70,40");
+            wire2.attr("stroke", "black");
+            wire2.attr("stroke-width", 1);
+            wire2.transform("T695,542");
+            
+            // radio waves
+            radioWave(animation2Context, 485, 500, 0);
+            radioWave(animation2Context, 783, 532, 0, true);
+
+            
+            animation2Paths = [];
+            animation2Paths.push(pipe3, pipe4, road, roadLine, wire1, wire2);
+            
+            var moon = createLight(animation2Canvas, animation2Context, 70, 70, {
+                color: 'white',
+                distance: 40,
+                radius: 30,
+                samples: 10
+            });
+            
+            streetLights = [
+                createLight(animation2Canvas, animation2Context, 30 , 530, streetLightOptions),
+                createLight(animation2Canvas, animation2Context, 377, 530, streetLightOptions),
+                createLight(animation2Canvas, animation2Context, 30 , 660, streetLightOptions),
+                createLight(animation2Canvas, animation2Context, 377, 660, streetLightOptions)
+            ];
+            
+            setInterval(function() {
+                var left = car.position().left;
+                if (left > 580) left = 0;
+                
+                car.css('left', left + 1);
+            }, 1000/23);
+        }
+        
+        // Slide Triggers ----------------------------------------------------//
+        document.addEventListener("impress:stepenter", function (event) {
+            var slide = event.target.id;
+            
+            if (slide == 'animation') {
+                $(".story").hide();
+                resetAnimation();
+                playAnimation();
+            }
+            
+            if (slide == 'animation-2') {
+                $(".story").hide();
+                resetAnimation2();
+                playAnimation2();
+            }
+            
+            if (slide.indexOf('story') != -1) {
+                setStory("#" + slide);
+            }
+            
+            if (slide == 'story-1') {
+                gas.hide();
+            }
+            
+        }, false);
+    </script>
+</body>
+</html>
