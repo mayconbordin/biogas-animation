@@ -239,7 +239,7 @@ Cloud.prototype = {
 var Dung = function(parent, zIndex, topIncrease) {
     if (typeof(zIndex) == 'undefined') zIndex = 4;
     if (typeof(topIncrease) == 'undefined') topIncrease = 0;
-    this.el = $('<img class="dung" src="../img/shit.svg" />');
+    this.el = $('<img class="dung" src="img/shit.svg" />');
     this.el.css({zIndex: zIndex, height: 45, top: 550, left: 680});
     parent.append(this.el);
     
