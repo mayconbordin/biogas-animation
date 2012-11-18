@@ -131,6 +131,40 @@ body     { pointer-events: none; }
 }
 
 /* STEP SPECIFIC STYLES */
+#start h1 {
+    text-align:center;
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 300px;
+    padding: 5px 8px;
+    background:#00A3FF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#start h1:hover {
+    background:#2CB3FF;
+}
+
+#intro {
+    text-align: center;
+}
+
+#intro h1 {
+    font-size: 40px;
+    margin-top:5px;
+}
+
+#epro {
+    height: 300px;
+}
+
+#setrem {
+    height: 200px;
+    margin-top: 100px;
+}
+
 #engenharia-do-futuro h1 {
     text-align: center;
     line-height:100px;
@@ -385,31 +419,35 @@ body     { pointer-events: none; }
 /* Story */
 
 #lisa-1, #lisa-2 {
-    height: 700px;
+    height: 600px;
+    margin-top: 80px;
 }
 
 #lisa-balloon-1 {
     height: 280px;
-    top: -80px;
 }
 
 #lisa-speech-1 {
-    top: 20px;
-    left: 265px;
-    font-size: 35px;
+    top: 80px;
+    left: 235px;
+    font-size: 48px;
+    width: 300px;
+    text-align:center;
+    line-height: 50px;
 }
 
 #lisa-balloon-2 {
-    height: 280px;
-    top: -80px;
-    left: 245px;
+    height: 250px;
+    left: 225px;
 }
 
 #lisa-speech-2 {
-    top: -15px;
-    left: 295px;
-    font-size: 35px;
-    width: 330px;
+    top: 50px;
+    left: 243px;
+    font-size: 38px;
+    width: 280px;
+    text-align:center;
+    line-height: 38px;
 }
 
 #protein-chain {
@@ -419,20 +457,20 @@ body     { pointer-events: none; }
 }
 
 #cida {
-    height: 700px;
+    height: 580px;
+    margin-top: 100px;
 }
 
 #cida-balloon {
-    height: 200px;
-    top: -80px;
-    left: 180px;
+    height: 180px;
+    left: 160px;
 }
 
 #cida-speech {
-    top: -25px;
-    left: 235px;
-    font-size: 30px;
-    width: 410px;
+    top: 38px;
+    left: 200px;
+    font-size: 35px;
+    width: 380px;
 }
 
 #tona {
@@ -441,16 +479,16 @@ body     { pointer-events: none; }
 }
 
 #tona-balloon {
-    height: 240px;
-    top: 40px;
+    height: 280px;
+    top: 0px;
     left: 240px;
 }
 
 #tona-speech {
-    top: 75px;
+    top: 35px;
     left: 255px;
-    font-size: 25px;
-    width: 270px;
+    font-size: 35px;
+    width: 340px;
     text-align: center;
 }
 
@@ -461,29 +499,31 @@ body     { pointer-events: none; }
 
 #tana-1, #tana-2 {
     margin-top: 100px;
-    height: 600px;
+    height: 500px;
+    position:relative;
+    top: 100px;
 }
 
 #tana-balloon-1,
 #tana-balloon-2 {
-    height: 260px;
-    top: -40px;
-    left: 240px;
+    height: 300px;
+    top: 0px;
+    left: 200px;
 }
 
 #tana-speech-1 {
-    top: 0px;
-    left: 265px;
-    font-size: 25px;
-    width: 270px;
+    top: 30px;
+    left: 238px;
+    font-size: 34px;
+    width: 300px;
     text-align: center;
 }
 
 #tana-speech-2 {
-    top: 20px;
-    left: 265px;
-    font-size: 25px;
-    width: 270px;
+    top: 60px;
+    left: 238px;
+    font-size: 34px;
+    width: 300px;
     text-align: center;
 }
 
@@ -493,36 +533,42 @@ body     { pointer-events: none; }
     left: 400px;
 }
 
+.methane-particle {
+    position: absolute;
+    height: 40px;
+}
+
 #story-7,
 #story-8 {
-    padding-top: 250px;
+    padding-top: 320px;
+    padding-left:50px;
 }
 
 #story-7 img,
 #story-8 img {
-    height: 400px;
-    margin-left: 30px;
+    height: 300px;
+    margin-left: 50px;
 }
 
 #story-7 .balloon,
 #story-8 .balloon {
     position: absolute;
-    top: -50px;
+    top: 0px;
     left: 60px;
     height: 300px;
 }
 
 #story-7 .speech {
     position: absolute;
-    top: 50px;
-    left: 150px;
+    top: 100px;
+    left: 170px;
     width: 600px;
     font-size: 48px;
 }
 
 #story-8 .speech {
     position: absolute;
-    top: 15px;
+    top: 60px;
     left: 130px;
     width: 600px;
     font-size: 48px;
@@ -561,7 +607,12 @@ body     { pointer-events: none; }
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     border: 1px solid rgba(0, 0, 0, .3);
     */
-    
+    /*
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    */
 
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);

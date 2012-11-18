@@ -194,6 +194,38 @@ function radioWave(ctx, x, y, radius, counterClockwise) {
     }, 200);
 }
 
+function moveCar(car, to) {
+    if (to > 580) to = 0;
+    car.css('left', to);
+    
+    setTimeout(function() {
+        moveCar(car, to+1);
+    }, 1000/23);
+}
+
+function setTimeline(t, fn, i) {
+    var i = (typeof(i) == 'undefined') ? 0 : i;
+    if (i >= t.length) return;
+    
+    setTimeout(function() {
+        fn();
+        setTimeline(t, fn, i+1);
+    }, t[i] * 1000);
+}
+
+function createMethaneParticle(target, x, y) {
+    var particle = $("<img class='methane-particle' src='img/methane_particle.svg' />");
+    particle.css({left: x, top: y});
+    target.append(particle);
+    
+    var rotate = 0;
+    setInterval(function() {
+        particle.rotate(rotate);
+        rotate += 10;
+    }, 1000/120);
+}
+
+
 
 // Create a cloud at `x` and `y`
 var Cloud = function(paper, x, y) {
